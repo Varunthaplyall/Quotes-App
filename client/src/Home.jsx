@@ -47,7 +47,7 @@ useEffect(()=>{
 
   return (
     <div className='pt-20 font-merriweather'>
-        <div className='mb-14 border bg-white rounded-lg  shadow-lg'>
+        <div className='mb-14 border bg-white rounded-lg shadow-lg'>
             <div className='mb-5 border-b p-4 font-semibold text-gray-600 bg-gray-50 rounded-t-lg'>
                 Create post
             </div>

@@ -51,18 +51,17 @@ const updateQuote = async(req,res,next) => {
     try {
         const id = req.params.id;
         const body = req.body;
-        const quote = await quotesModel.findByIdAndUpdate(id);
+        const quote = await quotesModel.findByIdAndUpdate(id, body, {new : true});
         res.status(200).json(quote)
     } catch (error) {
         next(error)
     }
 }
 
-
 const deleteQuote = async(req,res,next) => {
     try {
         const {id} = req.params 
-        await quotesModel.deleteById(id)
+        await quotesModel.findByIdAndDelete(id)
         res.status(200).json(id)
     } catch (error) {
         next(error)
